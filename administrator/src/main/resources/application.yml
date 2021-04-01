@@ -1,0 +1,21 @@
+consul:
+  client:
+    registration:
+      enabled: true
+      check:
+        http: true
+    defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"
+
+micronaut:
+  application:
+    name: "Administrator"
+  router:
+    static-resources:
+      default:
+        enabled: true
+        mapping: "/**"
+        paths: "classpath:public"
+  config-client:
+    enabled: true
+
+page-title: "Administrator"

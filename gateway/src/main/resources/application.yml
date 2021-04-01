@@ -1,0 +1,6 @@
+micronaut:
+  application:
+    name: gateway
+  server:
+    port: 8030
+rabbitmq.uri: amqp://localhost:5672

@@ -1,0 +1,35 @@
+micronaut:
+  application:
+    name: order-manager
+  config-client:
+    enabled: true
+  server:
+    port: 8081
+
+consul:
+  client:
+    registration:
+      enabled: true
+      check:
+        http: true
+    defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"
+
+datasources:
+  default:
+    url: jdbc:postgresql://127.0.0.1:26257/defaultdb?sslmode=disable
+    dialect: POSTGRES
+    username: root
+jpa:
+  default:
+    database-platform: org.hibernate.dialect.CockroachDB201Dialect
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+
+flyway:
+  datasources:
+    default:
+      enabled: true
+
+rabbitmq.uri: amqp://localhost:5672
+

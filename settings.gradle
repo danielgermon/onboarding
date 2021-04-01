@@ -1,0 +1,4 @@
+rootProject.name = 'personalisation-onboarding'
+include 'administrator'
+include 'gateway'
+include 'order-manager'
