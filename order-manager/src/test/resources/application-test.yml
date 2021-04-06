@@ -1,0 +1,11 @@
+consul:
+  client:
+    registration:
+      enabled: false
+
+micronaut:
+  metrics:
+    enabled: false
+    binders:
+      rabbitmq:
+        enabled: false
